@@ -1,112 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/dp_10"
-    android:layout_marginRight="@dimen/dp_10"
     android:layout_marginTop="@dimen/dp_5"
-    android:padding="@dimen/dp_5"
-    android:background="@drawable/edit_background3">
+    android:layout_marginRight="@dimen/dp_10"
+    android:background="@drawable/edit_background3"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp_4">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_45"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            fresco:roundedCornerRadius="5dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/tv_tag"
+            android:layout_toRightOf="@+id/iv_head"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="省厅大的说法都是理发卡进来看大家发进来看"
+            android:textColor="#313131"
+            android:textSize="@dimen/sp_9" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="1"
+            android:text="省厅大的说法都是"
+            android:textColor="#676767"
+            android:textSize="@dimen/sp_8" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:maxLines="1"
+            android:text="省厅大的说法都是"
+            android:textColor="#858585"
+            android:textSize="@dimen/sp_7" />
 
         <RelativeLayout
-            android:paddingLeft="@dimen/dp_16"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--<ImageView-->
-                <!--android:scaleType="fitXY"-->
-                <!--android:layout_alignParentLeft="true"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:id="@+id/iv_head"-->
-                <!--android:layout_width="@dimen/dp_85"-->
-                <!--android:layout_height="@dimen/dp_65"-->
-                <!--/>-->
-            <com.facebook.drawee.view.SimpleDraweeView
-                fresco:roundedCornerRadius="5dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/iv_head"
-                android:layout_width="@dimen/dp_65"
-                android:layout_height="@dimen/dp_45" />
-            <TextView
-                android:layout_toLeftOf="@+id/tv_tag"
-                android:id="@+id/tv_name"
-                android:layout_marginTop="@dimen/dp_12"
-                android:layout_toRightOf="@+id/iv_head"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_marginRight="@dimen/dp_10"
-                android:maxLines="1"
-                android:textColor="#313131"
-                android:ellipsize="end"
-                android:textSize="@dimen/sp_9"
-                android:text="省厅大的说法都是理发卡进来看大家发进来看"
-                />
 
-            <TextView
-                android:id="@+id/tv_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_name"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@+id/iv_head"
-                android:ellipsize="end"
-                android:gravity="bottom"
-                android:maxLines="1"
-                android:text="省厅大的说法都是"
-                android:textColor="#676767"
-                android:textSize="@dimen/sp_8" />
-            <TextView
-                android:id="@+id/tv_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_content"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@+id/iv_head"
-                android:maxLines="1"
-                android:text="省厅大的说法都是"
-                android:textColor="#858585"
-                android:textSize="@dimen/sp_7" />
-            <RelativeLayout
+            android:id="@+id/l_item_collection_news_delet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_10">
 
-                android:id="@+id/l_item_collection_news_delet"
-                android:layout_below="@id/tv_content"
-                android:layout_width="wrap_content"
-                android:padding="@dimen/dp_10"
-                android:layout_alignParentRight="true"
-                android:layout_height="wrap_content">
             <ImageView
-                android:textColor="#F85555"
-                android:textSize="@dimen/dp_10"
                 android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_13"
                 android:background="@mipmap/icon_delete_pressed"
-                android:layout_height="@dimen/dp_13" />
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/tv_tag"
-                android:layout_marginTop="@dimen/dp_12"
-                android:layout_alignParentRight="true"
-                android:text="新闻"
-                android:background="@drawable/bt_8background"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_7"
-                android:paddingLeft="@dimen/dp_5"
-                android:paddingRight="@dimen/dp_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <!--<TextView-->
-                <!--android:layout_alignParentBottom="true"-->
-                <!--android:background="@color/color_xian"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="@dimen/dp_0_5">-->
-            <!--</TextView>-->
+                android:textColor="#F85555"
+                android:textSize="@dimen/dp_10" />
         </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="@drawable/bt_8background"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:text="新闻"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_7" />
+    </RelativeLayout>
 
 </LinearLayout>

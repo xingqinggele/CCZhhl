@@ -24,7 +24,7 @@ import com.hulian.oa.L_launched.L_Activity.L_mailActivity;
 import com.hulian.oa.L_launched.L_Activity.L_meetingActivity;
 import com.hulian.oa.L_launched.L_Activity.L_taskActivity;
 import com.hulian.oa.XinMod.XFragment.XFBusfragment;
-import com.hulian.oa.address.AddressFragment;
+import com.hulian.oa.address.AddressFragment2;
 import com.hulian.oa.address.pad.Address_Pad_Fragment;
 import com.hulian.oa.agency.AgencyFragment;
 import com.hulian.oa.me.CollectionActivity2;
@@ -144,7 +144,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     RelativeLayout main2_rela_my_clock;
 
     private FragmentTransaction transaction;
-    private AddressFragment addressFragment;
+    private AddressFragment2 addressFragment;
     private Wechat messageFragment;
     private NewsFragment newsFragment;
     private WorkFragment workFragment;
@@ -249,26 +249,13 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         hideAllFragment(transaction);
         switch (i) {
             case R.id.rb_message:
-//                StatusBarUtil.statusBarLightMode(this);
                 StatusBarUtil.statusBarLightMode_white(this);
-
-//                if(BuildConfig.IsPad){
-//                    if(mailFragment==null){
-//                        mailFragment = new MailFragment().newInstance("");
-//                        transaction.add(R.id.content, mailFragment);
-//                    }
-//                    else {
-//                        transaction.show(mailFragment);
-//                    }
-//                }
-//                else {
                 if (messageFragment == null) {
                     messageFragment = new Wechat().newInstance("");
                     transaction.add(R.id.content, messageFragment);
                 } else {
                     transaction.show(messageFragment);
                 }
-                //   }
                 break;
             case R.id.rb_news:
                 StatusBarUtil.statusBarLightMode_white(this);
@@ -289,24 +276,17 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                 }
                 break;
             case R.id.rb_address:
-//                StatusBarUtil.statusBarLightMode(this);
-                StatusBarUtil.statusBarLightMode_white(this);
+                StatusBarUtil.statusBarLightMode(this);
                 if (BuildConfig.IsPad) {
-                    /*if (address_Pad_Fragment == null) {
-                        address_Pad_Fragment = new Address_Pad_Fragment().newInstance("");
-                        transaction.add(R.id.content, address_Pad_Fragment);
-                    } else {
-                        transaction.show(address_Pad_Fragment);
-                    }*/
                     if (addressFragment == null) {
-                        addressFragment = new AddressFragment().newInstance("");
+                        addressFragment = new AddressFragment2().newInstance("");
                         transaction.add(R.id.content, addressFragment);
                     } else {
                         transaction.show(addressFragment);
                     }
                 } else {
                     if (addressFragment == null) {
-                        addressFragment = new AddressFragment().newInstance("");
+                        addressFragment = new AddressFragment2().newInstance("");
                         transaction.add(R.id.content, addressFragment);
                     } else {
                         transaction.show(addressFragment);

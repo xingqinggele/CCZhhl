@@ -848,4 +848,15 @@ public class HttpRequest {
     public static void postReport(RequestParams params, List<File> files, ResponseCallback callback) {
         RequestMode.postMultipart(Urls.commUrls + "system/reportInfo/android/add", params, files, callback, null);
     }
+    /**
+     * 通讯录列表
+     *
+     * @param params
+     * @param callback
+     */
+    public static void getAddress_list(RequestParams params, ResponseCallback callback) {
+        RequestMode.postRequest(Urls.commUrls + "system/friendController/list", params, callback, null);
+    }
+
+
 }

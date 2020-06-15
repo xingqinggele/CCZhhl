@@ -24,34 +24,22 @@ import com.example.library.banner.layoutmanager.OverFlyingLayoutManager;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
-import com.hulian.oa.LoginActivity;
-import com.hulian.oa.MainActivity;
 import com.hulian.oa.R;
 import com.hulian.oa.bean.News;
-import com.hulian.oa.bean.User;
 import com.hulian.oa.net.HttpRequest;
 import com.hulian.oa.net.OkHttpException;
 import com.hulian.oa.net.RequestParams;
 import com.hulian.oa.net.ResponseCallback;
-import com.hulian.oa.net.Urls;
 import com.hulian.oa.news.adapter.LocalDataAdapter;
 import com.hulian.oa.news.adapter.NewsViewAdapter;
 import com.hulian.oa.utils.SPUtils;
-import com.hulian.oa.views.LoadingDialog;
-import com.hulian.oa.work.file.admin.activity.PostOrderActivity;
-import com.hulian.oa.work.file.admin.activity.document.l_fragment.L_PendFragment;
 import com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView;
 import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
 import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 

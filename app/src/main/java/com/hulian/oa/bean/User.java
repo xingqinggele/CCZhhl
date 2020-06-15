@@ -13,6 +13,33 @@ public class User {
     private String email;
     private List<Roles> roles;
     private String rolesStr = "";
+    private String loginName;
+    private String phonenumber;
+    private String sex;
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     public List<Roles> getRoles() {
         return roles;
     }

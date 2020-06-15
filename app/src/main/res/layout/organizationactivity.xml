@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:background="#2D4BCA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#2D4BCA"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/dp_40">
+
+        <RelativeLayout
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/relatout_bg1"
+                    android:padding="@dimen/dp_10">
+            <ImageView
+                android:layout_width="@dimen/dp_12"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/ic_left_white"
+                android:layout_height="@dimen/dp_12" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="组织机构"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11" />
+
+    </RelativeLayout>
+
+
+    <ExpandableListView
+        android:divider="@null"
+        android:id="@+id/exlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent" >
+    </ExpandableListView>
+
+</LinearLayout>

@@ -53,7 +53,6 @@ import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
 
-
     @BindView(R.id.et_userName)
     EditText etUserName;
     @BindView(R.id.et_pass)
@@ -157,28 +156,6 @@ public class LoginActivity extends BaseActivity {
         NIMClient.updateStatusBarNotificationConfig(statusBarNotificationConfig);
     }
 
-
-
-    /**
-     * GET请求
-     * @param view
-     */
-    public void GetRequet(View view) {
-
-        HttpRequest.getBannerApi(null, new ResponseCallback() {
-            @Override
-            public void onSuccess(Object responseObj) {
-                Toast.makeText(LoginActivity.this, "请求成功"+responseObj.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(OkHttpException failuer) {
-                Log.e("TAG", "请求失败=" + failuer.getEmsg());
-                Toast.makeText(LoginActivity.this, "请求失败="+failuer.getEmsg(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
 
     /**
      * POST请求
