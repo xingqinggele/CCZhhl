@@ -511,6 +511,7 @@ public class ExpenseApplyForActivity extends BaseActivity {
                 .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
 
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
